@@ -1,0 +1,22 @@
+@{
+  Layout = "_Layout";
+}
+@using Library.Models;
+
+  <h2>Books</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Book by Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach(var book in Model)
+      {
+        <tr>
+          <td><a href = "books/@book.Id/details">@book.Title</a></td>
+        </tr>
+      }
+      <tr>
+      </tbody>
+    </table>
